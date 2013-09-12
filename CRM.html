@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>CRM !</title>
+  
+ <script src='http://code.jquery.com/jquery-1.8.3.js'></script>
+ <script src="js/bootstrap.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/bootstrap-editable.js"></script>
+<script src="js/main.js"></script>                 
+
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css">
+  <link rel="stylesheet" type="text/css" href="http://vitalets.github.com/x-editable/assets/x-editable/bootstrap-editable/css/bootstrap-editable.css">
+
+
+</head>
+<body ng-app="myApp">
+<div ng-controller="Ctrl">
+<h3>CRM !!</h3>
+<table class="table table-condensed">
+<thead>
+<tr>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD1" placeholder="Req. #"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD2" placeholder="MONDAY MEETING?"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD3" placeholder="Request Raised Date"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD4" placeholder="Last Updated  Date"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD5" placeholder="Request Raised by (Name)"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD15" placeholder="Project Start Date"> </td>
+</tr>
+<tr>
+<th>Req. #</th>
+<th>MONDAY MEETING?</th>
+<th>Request Raised Date</th>
+<th>Last Updated  Date</th>
+<th>Request Raised by (Name)</th>
+<th>ISU/HSU</th>
+<th>Account Name</th>
+<th>Opportunity Name</th>
+<th>Sales stage</th>
+<th>Opportunity Closure  Date</th>
+<th>Win Probability</th>
+<th>Type of Business (New or renewal of existing)</th>
+<th>Qualified</th>
+<th>Project type</th>
+<th>Project Start Date</th>
+"<th>Project
+Duration 
+(months) </th>"
+<th>Billing Rate (Euro/Day)</th>
+"<th>Key contact
+ in BU
+ (Name)</th>"
+<th>BU</th>
+<th>Opportunity description</th>
+<th>Challenges or Pain points</th>
+<th>BU</th>
+<th>Any Suitable Resource Internally</th>
+"<th>Internal 
+Consultant 
+Name</th>"
+<th>Recruitment?</th>
+<th>Sub contactor</th>
+<th>Role/title</th>
+<th>Main Technology</th>
+<th>Main Functional Skill</th>
+<th>Years of Experience</th>
+<th>Project Location</th>
+<th>Headcount (ETP) </th>
+<th>Role Description</th>
+<th>Includes MSA (Y/N)</th>
+<th>Main competitor</th>
+<th>Total revenue</th>
+<th>Weightage</th>
+
+
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="person in persons | filter:query">  
+<td>{{person.FIELD1}}</td>
+<td>{{person.FIELD2}}</td>
+<td>{{person.FIELD3}}</td>
+<td>{{person.FIELD4}}</td>
+<td>{{person.FIELD5}}</td>
+<td>{{person.FIELD5}}</td>                                                                                                   
+<td>{{person.FIELD6}}</td>
+<td>{{person.FIELD7}}</td>    
+<td>{{person.FIELD8}}</td>
+<td>{{person.FIELD9}}</td>
+<td>{{person.FIELD10}}</td>
+<td>{{person.FIELD11}}</td>
+<td>{{person.FIELD12}}</td>
+<td>{{person.FIELD13}}</td>
+<td>{{person.FIELD14}}</td>
+<td>{{person.FIELD15}}</td>
+<td>{{person.FIELD16}}</td>
+<td>{{person.FIELD17}}</td>
+<td>{{person.FIELD18}}</td>
+<td>{{person.FIELD19}}</td>
+<td>{{person.FIELD20}}</td>
+<td>{{person.FIELD21}}</td>
+<td>{{person.FIELD22}}</td>
+<td>{{person.FIELD23}}</td>
+<td>{{person.FIELD24}}</td>
+<td>{{person.FIELD25}}</td>
+<td>{{person.FIELD26}}</td>
+<td>{{person.FIELD27}}</td>
+<td>{{person.FIELD28}}</td>
+<td>{{person.FIELD29}}</td>
+<td>{{person.FIELD30}}</td>
+<td>{{person.FIELD31}}</td>
+<td>{{person.FIELD32}}</td>
+<td>{{person.FIELD33}}</td>
+<td>{{person.FIELD34}}</td>
+<td>{{person.FIELD35}}</td>
+<td>{{person.FIELD36}}</td>
+<td>{{person.FIELD37}}</td>
+
+</tr>
+</tbody>
+</table> 
+
+</div>
+  
+</body>
+
+
+</html>
+
