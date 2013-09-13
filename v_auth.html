@@ -9,11 +9,12 @@
         </tr>
         <tr>      
           <td>Mot de passe</td>      
-          <td><input type="text" ng-model="password" class="input-medium"/></td>             
+          <td><input type="password" ng-model="password" class="input-medium"/></td>             
         </tr>           
       </tbody>         
     </table>         
-    <a href="#/check/{{user}}/password/{{password}}" class="btn btn-medium btn-primary"> Go !</a>                                                                           
+    <a href="" ng-click="check()" class="btn btn-medium btn-primary"> Go !</a> 
+    <br><b>{{message}}</b>                                                                          
   </form>   
 
 </div>
