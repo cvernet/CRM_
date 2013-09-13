@@ -1,0 +1,56 @@
+<div id="RH">
+<h3>RH (beta)</h3>
+<table class="table table-condensed">
+<thead>
+<tr>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD1" placeholder="Req. ID"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD2" placeholder="ID"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD3" placeholder="Recruiter"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD4" placeholder="Name"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD5" placeholder="Surname"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD6" placeholder="Sourcing"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD7" placeholder="Status"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD8" placeholder="Role/Title"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD9" placeholder="Main Technology"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD10" placeholder="Main Functionnal"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD11" placeholder="Years of Experience"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD12" placeholder="Location"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD13" placeholder="Role description"> </td>                                                                                                            
+
+</tr>
+<tr>
+<th>REQ ID</th>
+<th>ID</th>
+<th>Recruiter</th>
+<th>Name</th>
+<th>Surname</th>
+<th>Sourcing</th>
+<th>Status</th>
+<th>Role/Title</th>
+<th>Main Technology</th>
+<th>Main Functionnal</th>
+<th>Years of Experience</th>
+<th>Location</th>
+<th>Role Description</th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="person in persons | filter:query | filter:isSearch">  
+<td>{{person.FIELD1}}</td>
+<td>{{person.FIELD2}}</td>
+<td>{{person.FIELD3}}</td>
+<td>{{person.FIELD4}}</td>
+<td>{{person.FIELD5}}</td>
+<td>{{person.FIELD6}}</td>
+<td>{{person.FIELD7}}</td>
+<td>{{person.FIELD8}}</td>
+<td>{{person.FIELD9}}</td>
+<td>{{person.FIELD10}}</td>
+<td>{{person.FIELD11}}</td>
+<td>{{person.FIELD12}}</td>
+<td>{{person.FIELD13}}</td>
+</tr>
+</tbody>
+</table> 
+
+</div>
