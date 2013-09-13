@@ -1,5 +1,5 @@
  <div id="CRM">
-<h3>CRM By CVER !</h3>
+<h3>CRM (beta)</h3>
 <table class="table table-condensed">
 <thead>
 <tr>
@@ -11,7 +11,6 @@
 <td><input type="text" class="input-small search-query" ng-model="query.FIELD9" placeholder="Sales stage"> </td>
 <td><input type="text" class="input-small search-query" ng-model="query.FIELD10" placeholder="Opportunity Closure  Date"> </td>
 <td><input type="text" class="input-mini search-query" ng-model="query.FIELD11" placeholder="Win Probability"> </td>
-<td><input type="text" class="input-small search-query" ng-model="query.FIELD12" placeholder="Type of Business (New or renewal of existing)"> </td>
 <td><input type="text" class="input-small search-query" ng-model="query.FIELD15" placeholder="Project Start Date"> </td>
 <td><input type="text" class="input-small search-query" ng-model="query.FIELD16" placeholder="Project Duration (months) "> </td>
 <td><input type="text" class="input-small search-query" ng-model="query.FIELD17" placeholder="Billing Rate (Euro/Day)"> </td>
@@ -41,8 +40,8 @@
 <th>Sales stage</th>
 <th>Opportunity Closure  Date</th>
 <th>Win Probability</th>
-<th>Type of Business (New or renewal of existing)</th>
-<!-- <th>Qualified</th> 
+<!-- <th>Type of Business (New or renewal of existing)</th>
+<th>Qualified</th> 
 <th>Project type</th>   -->
 <th>Project Start Date</th>
 <th>Project Duration (months) </th>
@@ -72,8 +71,9 @@
 </tr>
 </thead>
 <tbody>
-<tr ng-repeat="need in needs | filter:query">  
-<td><a href="#/rh/{{need.FIELD1}}">{{need.FIELD1}}</a></td>
+<tr ng-repeat="need in needs | filter:query | orderBy: 'FIELD9'">  
+<td>
+<a href="javascript:window.open('#/rh/{{need.FIELD1}}','popup','resizable=no,scrollbars=yes,location=no,width=1000,height=500,top=200,left=200');">{{need.FIELD1}}</a></td>
 <!-- <td>{{need.FIELD2}}</td>
 <td>{{need.FIELD3}}</td>
 <td>{{need.FIELD4}}</td> -->
@@ -84,8 +84,8 @@
 <td>{{need.FIELD9}}</td>
 <td>{{need.FIELD10}}</td>
 <td>{{need.FIELD11}}</td>
-<td>{{need.FIELD12}}</td>
-<!-- <td>{{need.FIELD13}}</td>
+<!-- <td>{{need.FIELD12}}</td>
+<td>{{need.FIELD13}}</td>
 <td>{{need.FIELD14}}</td> -->
 <td>{{need.FIELD15}}</td>
 <td>{{need.FIELD16}}</td>
