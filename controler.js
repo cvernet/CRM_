@@ -13,20 +13,34 @@ var myApp = angular.module('myApp', []).
 myApp.controller('CRM',
 function ($scope, $http, $routeParams) {
   
-$http.get('crm.json').success(function(data) {
-	$scope.needs = data;
-});    
-$scope.needs = [];
-  
+if (localStorage['auth'] == 'crm_ok')  
+    {
+      $http.get('crm.json').success(function(data) {
+      	$scope.needs = data;
+      });    
+      $scope.needs = [];
+    }
+else
+     {
+       window.location.href ='http://cvernet.host-ed.me/CRM/Main.html';
+     }  
   });
 
 myApp.controller('RH',
 function ($scope, $http, $routeParams) {
-  
-$http.get('RH.json').success(function(data) {
-	$scope.persons = data;
-});    
-$scope.persons = [];
+
+if (localStorage['auth'] == 'crm_ok')  
+    {
+    $http.get('RH.json').success(function(data) {
+    	$scope.persons = data;
+    });    
+     }
+     else
+     {
+       window.location.href ='http://cvernet.host-ed.me/CRM/Main.html';
+     }
+     
+    $scope.persons = [];
 
     $scope.isSearch = function(person){
   if (person.FIELD1.match($routeParams.id)) 
@@ -40,7 +54,10 @@ function ($scope, $http, $routeParams) {
   
 $scope.check = function () {  
   if ($scope.user == 'crm' && $scope.password == 'crm')
-  window.location.href ='http://cvernet.host-ed.me/CRM/Main.html#/crm';
+     {
+     localStorage['auth'] = 'crm_ok';
+     window.location.href ='http://cvernet.host-ed.me/CRM/Main.html#/crm';
+     }
   else
   $scope.message = 'Vous n\'avez pas les autorisations.';
 }  
