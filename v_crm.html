@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>CRM !</title>
-  
- <script src='http://code.jquery.com/jquery-1.8.3.js'></script>
- <script src="js/bootstrap.min.js"></script>
-<script src="js/angular.min.js"></script>
-<script src="js/bootstrap-editable.js"></script>
-<script src="js/main.js"></script>                 
-
-  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css">
-  <link rel="stylesheet" type="text/css" href="http://vitalets.github.com/x-editable/assets/x-editable/bootstrap-editable/css/bootstrap-editable.css">
-
-
-</head>
-<body ng-app="myApp">
-<div ng-controller="Ctrl">
+ <div id="CRM">
 <h3>CRM By CVER !</h3>
 <table class="table table-condensed">
 <thead>
@@ -90,53 +72,47 @@
 </tr>
 </thead>
 <tbody>
-<tr ng-repeat="person in persons | filter:query">  
-<td>{{person.FIELD1}}</td>
-<!-- <td>{{person.FIELD2}}</td>
-<td>{{person.FIELD3}}</td>
-<td>{{person.FIELD4}}</td> -->
-<td>{{person.FIELD5}}</td>                                                                                                   
-<td>{{person.FIELD6}}</td>
-<td>{{person.FIELD7}}</td>    
-<td>{{person.FIELD8}}</td>
-<td>{{person.FIELD9}}</td>
-<td>{{person.FIELD10}}</td>
-<td>{{person.FIELD11}}</td>
-<td>{{person.FIELD12}}</td>
-<!-- <td>{{person.FIELD13}}</td>
-<td>{{person.FIELD14}}</td> -->
-<td>{{person.FIELD15}}</td>
-<td>{{person.FIELD16}}</td>
-<td>{{person.FIELD17}}</td>
-<td>{{person.FIELD18}}</td>
-<!-- <td>{{person.FIELD19}}</td> -->
-<td>{{person.FIELD20}}</td>
-<!-- <td>{{person.FIELD21}}</td>
-<td>{{person.FIELD22}}</td> -->
-<td>{{person.FIELD23}}</td>
-<td>{{person.FIELD24}}</td>
-<!-- <td>{{person.FIELD25}}</td> -->
-<td>{{person.FIELD26}}</td>
-<td>{{person.FIELD27}}</td>
-<td>{{person.FIELD28}}</td>
-<td>{{person.FIELD29}}</td>
-<td>{{person.FIELD30}}</td>
-<td>{{person.FIELD31}}</td>
-<!-- <td>{{person.FIELD32}}</td> -->
-<td>{{person.FIELD33}}</td>
-<!-- <td>{{person.FIELD34}}</td>
-<td>{{person.FIELD35}}</td>
-<td>{{person.FIELD36}}</td>
-<td>{{person.FIELD37}}</td> -->
-  <td>{{person.FIELD38}}</td>
+<tr ng-repeat="need in needs | filter:query">  
+<td><a href="#/rh/{{need.FIELD1}}">{{need.FIELD1}}</a></td>
+<!-- <td>{{need.FIELD2}}</td>
+<td>{{need.FIELD3}}</td>
+<td>{{need.FIELD4}}</td> -->
+<td>{{need.FIELD5}}</td>                                                                                                   
+<td>{{need.FIELD6}}</td>
+<td>{{need.FIELD7}}</td>    
+<td>{{need.FIELD8}}</td>
+<td>{{need.FIELD9}}</td>
+<td>{{need.FIELD10}}</td>
+<td>{{need.FIELD11}}</td>
+<td>{{need.FIELD12}}</td>
+<!-- <td>{{need.FIELD13}}</td>
+<td>{{need.FIELD14}}</td> -->
+<td>{{need.FIELD15}}</td>
+<td>{{need.FIELD16}}</td>
+<td>{{need.FIELD17}}</td>
+<td>{{need.FIELD18}}</td>
+<!-- <td>{{need.FIELD19}}</td> -->
+<td>{{need.FIELD20}}</td>
+<!-- <td>{{need.FIELD21}}</td>
+<td>{{need.FIELD22}}</td> -->
+<td>{{need.FIELD23}}</td>
+<td>{{need.FIELD24}}</td>
+<!-- <td>{{need.FIELD25}}</td> -->
+<td>{{need.FIELD26}}</td>
+<td>{{need.FIELD27}}</td>
+<td>{{need.FIELD28}}</td>
+<td>{{need.FIELD29}}</td>
+<td>{{need.FIELD30}}</td>
+<td>{{need.FIELD31}}</td>
+<!-- <td>{{need.FIELD32}}</td> -->
+<td>{{need.FIELD33}}</td>
+<!-- <td>{{need.FIELD34}}</td>
+<td>{{need.FIELD35}}</td>
+<td>{{need.FIELD36}}</td>
+<td>{{need.FIELD37}}</td> -->
+  <td>{{need.FIELD38}}</td>
 </tr>
 </tbody>
 </table> 
 
 </div>
-  
-</body>
-
-
-</html>
-

@@ -14,7 +14,7 @@ function Ctrl($scope, $http) {
     
    if ($scope.persons == null ) {
     
-$http.get('crm.json').success(function(data) {
+     $http.get('crm.json').success(function(data) {
 	$scope.persons = data;
 });    
 
