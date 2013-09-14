@@ -56,7 +56,7 @@ $scope.check = function () {
   if ($scope.user == 'crm' && $scope.password == 'crm')
      {
      localStorage['auth'] = 'crm_ok';
-     window.location.href ='http://cvernet.host-ed.me/CRM/Main.html#/crm';
+     window.location.href ='./Main.html#/crm';
      }
   else
   $scope.message = 'Vous n\'avez pas les autorisations.';
